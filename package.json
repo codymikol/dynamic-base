@@ -7,6 +7,9 @@
   "author": "Cody Mikol <codymikol@gmail.com>",
   "license": "MIT",
   "private": false,
+  "files": [
+    "/dist"
+  ],
   "scripts": {
     "test:nowatch": "./node_modules/karma/bin/karma start ./karma.conf.js --watch false",
     "test": "./node_modules/karma/bin/karma start ./karma.conf.js",
