@@ -1,6 +1,13 @@
 # dynamic-base
 
-This is a tool for automatically setting the base href to any given origin
+ [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+[![Join the chat at https://gitter.im/dynamic-base/dynamic-base](https://badges.gitter.im/dynamic-base/community.svg)](https://gitter.im/dynamic-base/dynamic-base)
+[![Last Commit](https://badgen.net/github/last-commit/codymikol/dynamic-base)](https://github.com/codymikol/dynamic-base/issues)
+ [![Downloads](https://badgen.net/npm/dt/dynamic-base)](https://www.npmjs.com/package/dynamic-base)
+ [![Publish Size](https://badgen.net/bundlephobia/minzip/dynamic-base)](https://bundlephobia.com/result?p=dynamic-base@1.1.1)
+  [![Travis Build](https://badgen.net/travis/codymikol/dynamic-base)](https://travis-ci.com/codymikol/dynamic-base)
+
+#### A utility that automatically sets the base href to the origin
 
 #### Compatibility
 
