@@ -12,6 +12,11 @@ Currently tested working on
 * IE11+
 * iOS
 
+#### Installation
+
+##### via yarn: `yarn add dynamic-base`
+##### via npm : `npm install dynamic-base`
+
 #### Example Usage
 
 Given https://dynamic-base.com:8080/some/suffix/here/other/stuff
