@@ -1,7 +1,7 @@
 describe('dynamicBase', function () {
 
     var mockHostname,
-        mockOrigin,
+        mockProtocol,
         mockPort,
         getBase,
         mockLocation,
@@ -10,13 +10,13 @@ describe('dynamicBase', function () {
 
     beforeEach(function () {
 
-        mockOrigin = 'https:';
+        mockProtocol = 'https:';
         mockHostname = 'test.local';
         mockPort = '7777';
 
         mockLocation = {
             hostname: mockHostname,
-            origin: mockOrigin,
+            protocol: mockProtocol,
             port: mockPort,
         };
 
@@ -41,7 +41,7 @@ describe('dynamicBase', function () {
         elem.parentNode.removeChild(elem);
     });
 
-    it('should add a base tag to the origin', function () {
+    it('should add a base tag to the protocol', function () {
         window.dynamicBase();
         expect(getBaseTags().length).toEqual(1)
     });
@@ -66,6 +66,12 @@ describe('dynamicBase', function () {
         mockLocation.port = undefined;
         window.dynamicBase('/suffix/test');
         expect(getBaseHref()).toEqual('https://test.local/suffix/test')
-    })
+    });
+
+    it('should match the origin when called through', function () {
+        window.__getLocation.and.callThrough();
+        window.dynamicBase('/test');
+        expect(getBaseHref()).toEqual(window.origin + '/test')
+    });
 
 });
